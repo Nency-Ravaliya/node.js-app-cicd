@@ -17,7 +17,7 @@ jobs:
         DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
       run: |
-          docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
-          docker build -t "${DOCKER_USERNAME}/node.js-app-cicd:latest" .
-          docker tag "${DOCKER_USERNAME}/node.js-app-cicd:latest" "${DOCKER_USERNAME}/node.js-app-cicd:latest"
-          docker push "${DOCKER_USERNAME}/node.js-app-cicd:latest"
+        docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+        docker build -t "${DOCKER_USERNAME}/node.js-app-cicd:latest" .
+        docker tag "${DOCKER_USERNAME}/node.js-app-cicd:latest" "${DOCKER_USERNAME}/node.js-app-cicd:latest"
+        docker push "${DOCKER_USERNAME}/node.js-app-cicd:latest"
