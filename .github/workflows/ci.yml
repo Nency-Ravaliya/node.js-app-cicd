@@ -22,3 +22,4 @@ jobs:
       run: docker build -t node.js-app-cicd .
     - name: Push to Dockerhub
       run: docker push nensiravaliya28/node.js-app-cicd:latest
+      
