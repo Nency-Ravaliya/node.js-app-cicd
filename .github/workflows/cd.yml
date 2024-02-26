@@ -14,9 +14,9 @@ jobs:
 
     steps:
     - name: Pull Docker image
-      run: docker pull nensiravaliya028/node.js-app-cicd:latest
+      run: sudo docker pull nensiravaliya028/node.js-app-cicd:latest
     - name: Delete Old docker container
       run: |
-        docker rm -f "node.js-app-cicd-container" || true
+        sudo docker rm -f "node.js-app-cicd-container" || true
     - name: Run Docker Container
       run: sudo docker run -d -p 8080:8080 --name node.js-app-cicd-container nensiravaliya028/node.js-app-cicd
