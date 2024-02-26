@@ -19,5 +19,10 @@ jobs:
       run: |
         docker rm -f "node.js-app-cicd-container" || true
     - name: Run Docker Container
+<<<<<<< HEAD
+      run: sudo docker run -d -p 8080:8080 --name node.js-app-cicd-container nensiravaliya028/node.js-app-cicd
+=======
       run: |
         docker run -d -p 8080:8080 --name "node.js-app-cicd-container" nensiravaliya028/node.js-app-cicd:latest
+
+>>>>>>> 4726c840a2fbd559d6137206e0657d72ba7314d7
